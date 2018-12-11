@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>David</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/PrimerasArrays/Ej1.java</name>
+			<type>1</type>
+			<location>C:/David Sanchez/Pr/Arrays/Ej1.java</location>
+		</link>
+		<link>
+			<name>src/PrimerasArrays/Ej2.java</name>
+			<type>1</type>
+			<location>C:/David Sanchez/Pr/Arrays/Ej2.java</location>
+		</link>
+		<link>
+			<name>src/PrimerasArrays/Ej3.java</name>
+			<type>1</type>
+			<location>C:/David Sanchez/Pr/Arrays/Ej3.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>
