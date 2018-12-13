@@ -27,6 +27,7 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 	public EstatsMotorCotxe comprovaMotor() {
 		
 		
+		
 		return null;
 	}
 
@@ -38,7 +39,16 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 
 	@Override
 	public void aturarMotor() throws Exception {
-		
+	
+		if (estatsmotor.equals(EstatsMotorCotxe.EnMarxa)) {
+			
+			estatsmotor = EstatsMotorCotxe.Aturat;
+			
+		} else {
+			
+			throw new IllegalArgumentException ("El coche ya esta apagado.");
+			
+		}
 		
 		
 	}
