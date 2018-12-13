@@ -20,10 +20,7 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 		
 		throw new IllegalArgumentException ("El coche ya esta encendido.");
 		
-	}
-		
-		
-		
+	}	
 	}
 
 	@Override
