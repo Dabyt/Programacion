@@ -26,15 +26,23 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 	@Override
 	public EstatsMotorCotxe comprovaMotor() {
 		
-		
-		
-		return null;
+		return estatsmotor;
 	}
 
 	@Override
 	public int getRevolucions() {
 		
-		return 0;
+		int revoluciones = 1;
+		
+		if (estatsmotor.equals(EstatsMotorCotxe.EnMarxa)) {
+			revoluciones = (int) (Math.random()*6500);
+		}
+		else if (estatsmotor.equals(EstatsMotorCotxe.EnMarxa)) {
+			
+			revoluciones = 0;
+		}	
+		
+		return revoluciones;
 	}
 
 	@Override
@@ -46,21 +54,7 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 			
 		} else {
 			
-			throw new IllegalArgumentException ("El coche ya esta apagado.");
-			
-		}
-		
-		
+			throw new IllegalArgumentException ("El coche ya esta apagado.");		
+		}		
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
