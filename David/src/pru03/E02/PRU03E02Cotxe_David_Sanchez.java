@@ -4,9 +4,10 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 	
 	protected EstatsMotorCotxe estatsmotor = EstatsMotorCotxe.Aturat;
 	
-	public PRU03E02Cotxe_David_Sanchez(String marca, String model, TipusCanvi tipuscanvi) {
+	public PRU03E02Cotxe_David_Sanchez(String marca, String model, TipusCanvi tipuscanvi, EstatsMotorCotxe estat) {
 		super(marca, model, tipuscanvi);
-		// TODO Auto-generated constructor stub
+		this.marca = marca;
+		
 	}
 
 	@Override
