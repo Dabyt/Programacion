@@ -13,10 +13,11 @@ public class PRU03E02TestCotxe_David_Sanchez {
 
 		do {
 
-			System.out.println ("1- Arrancar coche");
+			System.out.println ("1- Arrancar coche.");
 			System.out.println ("2- Estado del motor. ");
 			System.out.println ("3- Revoluciones del coche.");
-			System.out.println ("4- Apagar coche..");
+			System.out.println ("4- Cambiar marchas.");
+			System.out.println ("5- Apagar coche..");
 
 			menu = teclado.nextInt();
 
@@ -36,6 +37,11 @@ public class PRU03E02TestCotxe_David_Sanchez {
 
 			}
 			else if (menu==4) {
+
+				micoche.CanviarMarxaAutomatic();
+
+			}
+			else if (menu==5) {
 				
 				micoche.aturarMotor();
 				System.out.println("Su coche se ha apagado, hasta la proxima."); 
