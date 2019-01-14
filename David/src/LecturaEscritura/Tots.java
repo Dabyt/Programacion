@@ -16,21 +16,29 @@ public class Tots {
 			BufferedReader bfi = new	BufferedReader (new FileReader("C:\\David Sanchez\\impares.dat"));
 			BufferedWriter bwt = new	BufferedWriter (new FileWriter("C:\\David Sanchez\\tots.dat"));
 			String linea = "";
+			String lineados = "";
 			
 			
-			while (null != linea) {
+			while (linea != null) {
 				
 				linea = bfp.readLine();
 				
-				bwt.write(linea + "\n");
-				
-				System.out.println (linea);
-			
-				linea = bfi.readLine();
+				if (linea != null) {
 				
 				bwt.write(linea + "\n");
 				
 				System.out.println (linea);
+				
+				}
+				
+				lineados = bfi.readLine();
+				
+				if (lineados != null) {
+				
+					bwt.write(lineados + "\n");
+				
+					System.out.println (lineados);
+					}
 				
 			}
 
