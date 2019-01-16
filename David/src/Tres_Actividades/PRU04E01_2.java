@@ -1,4 +1,4 @@
-package Tres_Actividades;
+
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -14,28 +14,58 @@ public class PRU04E01_2 {
 	
 		try{
 
-			BufferedReader bf = new	BufferedReader (new FileReader(args[0]));
-			BufferedWriter bw = new	BufferedWriter (new FileWriter(args[0] + "sort.txt"));
+			BufferedReader br = new	BufferedReader (new FileReader(args[0]));
+			BufferedWriter bw = new	BufferedWriter (new FileWriter(args[1]));
 
 			ArrayList<String> linea = new ArrayList<String>();
+			String linealeida = "";
+			int n=0;
 			
+			do {			
 
+				linealeida = br.readLine();
+				
+				if (linealeida != null && !linealeida.contains("//")){
+					
+					linea.add(linealeida);
+					n=0;
+				}
+				
+				else if(linealeida == null){
+						
+						
+					linealeida = "\n";
+					linea.add(linealeida);
+					n++;
+							
+					
+					
+				}
+				else if(linealeida.contains("//")) {
+					
+					linealeida = "";
+					linea.add(linealeida);
+					n=0;
+					}
+				
+			}while (n<=5);
 			
+			for (int i=0; i<linea.size();i++) {
+				
+				bw.write(linea.get(i) + "\n");
 
-			bf.close();
+			}
+				
+			br.close();
 			bw.close();
-			// https://jarroba.com/arraylist-en-java-ejemplos/
+		
 		}catch(IOException e) {
 
 		}}}	
 		
 		
 		
-		
-		
-		
-		
-		
+
 		
 		
 		

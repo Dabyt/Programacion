@@ -8,12 +8,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Collections;
 
-public class PRU04E01_1 {
+public class hola {
 
 	public static void main(String[] args) {
 
 		try{
-
+			//fhjjodfsdfsufgdsgdfsgdfs
 			BufferedReader bf = new	BufferedReader (new FileReader(args[0]));
 			BufferedWriter bw = new	BufferedWriter (new FileWriter(args[0] + "sort.txt"));
 
@@ -29,23 +29,23 @@ public class PRU04E01_1 {
 					}
 				
 			}while (linealeida != null);
-
+			//fhfhhadfishadfksadfhkshadfikshijfads
 			for (int i=0; i<linea.size();i++) {
 				System.out.println(linea.get(i));
 			}
 			
-			System.out.println("-------------------------------------------------");
+			System.out.println("-------------------------//------------------------");
 			Collections.sort(linea);
 
 			for (int i=0; i<linea.size();i++) {
 				System.out.println(linea.get(i));
 				bw.write(linea.get(i) + "\n");
-
+				
 			}
 
 			bf.close();
 			bw.close();
-		
+		//hjdfhfacdsiknuafsdadflskiuyadfhsiu
 		}catch(IOException e) {
 
 		}}}
