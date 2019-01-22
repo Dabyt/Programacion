@@ -6,7 +6,7 @@ public class PRU03E02TestCotxe_David_Sanchez {
 
 	public static void main (String[] args) throws Exception {
 
-		PRU03E02Cotxe_David_Sanchez micoche = new PRU03E02Cotxe_David_Sanchez("Citroen", "Renault", TipusCanvi.CanviAutomatic);	
+		PRU03E02Cotxe_David_Sanchez micoche = new PRU03E02Cotxe_David_Sanchez("Citroen", "Renault", TipusCanvi.CanviManual);	
 		int menu;
 		int n= 0;
 		Scanner teclado = new Scanner(System.in);	          
@@ -37,8 +37,14 @@ public class PRU03E02TestCotxe_David_Sanchez {
 
 			}
 			else if (menu==4) {
-
-				micoche.CanviarMarxaAutomatic();
+				
+				if (micoche.equals(TipusCanvi.CanviAutomatic)) {
+					micoche.CanviarMarxaAutomatic();
+				}
+				
+				else if (micoche.equals(TipusCanvi.CanviManual)) {
+					micoche.CanviarMarxaManual();
+					}
 
 			}
 			else if (menu==5) {

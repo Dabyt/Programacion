@@ -8,7 +8,10 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 
 	protected String auto[] = {"F","N","R"};
 
+	protected int manual[] = {0,1,2,3,4,5,6};
 
+	
+	
 	public PRU03E02Cotxe_David_Sanchez(String marca, String model, TipusCanvi tipuscanvi) {
 		super(marca, model, tipuscanvi);
 		this.marca = marca;
@@ -130,23 +133,108 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 
 	public void CanviarMarxaManual() throws Exception {
 
-		if (estatsmotor.equals(EstatsMotorCotxe.EnMarxa)) {
-
-			estatsmotor = EstatsMotorCotxe.Aturat;
-
-		} else {
-
-			throw new IllegalArgumentException ("El coche ya esta apagado.");		
-		}		
-	}
+	
+			int menuu;
+			int nn= 0;
+			int x = 1;
+			String valor = "N";
+			Scanner teclado = new Scanner(System.in);	
 
 
+			if (this.tipuscanvi.equals(TipusCanvi.CanviManual)) {
+				
+				
+	
+				do {
+
+					System.out.println ("1- Subir marcha.");
+					System.out.println ("2- Bajar marcha.");
+					System.out.println ("3- Marchas cambiadas.");
+				
+					menuu = teclado.nextInt();
+					
+					System.out.println ("Estas en " + x);
+					
+					
+					if (menuu==1) {
+
+						if (manual[x]<= 6 && manual[x] >=0) {
+						
+						x++;
+						System.out.print ("Has subido de marcha");
+						
+						if (x==1) {
+							System.out.print ("Estas en primera");
+						}
+						if (x==2) {
+							System.out.print ("Estas en segunda");
+						}
+						if (x==3) {
+							System.out.print ("Estas en tercera");
+						}
+						if (x==4) {
+							System.out.print ("Estas en cuarta");
+						}
+						if (x==5) {
+							System.out.print ("Estas en quinta");
+						}
+						if (x==6) {
+							System.out.print ("Estas en sexta");
+						}
+						}
+						else {
+							System.out.println ("No puedes subir más.");
+						}
+
+					}
+					else if (menuu==2) {
+
+						if (manual[x]<= 6 && manual[x] >=0) {
+							
+							x--;
+							System.out.println("Has bajado de marcha.");
+							
+							if (x==0) {
+								System.out.print ("Estas marcha atrás.");
+							}
+							if (x==1) {
+								System.out.print ("Estas en primera");
+							}
+							if (x==2) {
+								System.out.print ("Estas en segunda");
+							}
+							if (x==3) {
+								System.out.print ("Estas en tercera");
+							}
+							if (x==4) {
+								System.out.print ("Estas en cuarta");
+							}
+							if (x==5) {
+								System.out.print ("Estas en quinta");
+							}
+							}
+							else {
+								System.out.println ("No puedes bajar más.");
+							}
+							}
+					
+						else if (menuu==3) {
+
+						valor = auto[0];
+						System.out.println("Te habras quedado en la marcha" + x); 
+
+					}
+					
+
+					else{
+
+						System.out.println("¡Eso no está en el menu! Intentalo otra vez...");  
+					}
+				}while (nn<=0);
 
 
+			} else { 
 
+				throw new IllegalArgumentException ("El coche es automatico, no puedes cambiar marchas manuales.");
 
-
-
-
-
-}
+			}}}
