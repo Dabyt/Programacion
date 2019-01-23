@@ -38,12 +38,15 @@ public class PRU03E02TestCotxe_David_Sanchez {
 			}
 			else if (menu==4) {
 				
-				if (micoche.equals(TipusCanvi.CanviAutomatic)) {
+				System.out.println("Dentro"); 
+				
+				if (micoche.tipuscanvi.equals(TipusCanvi.CanviAutomatic)) {
 					micoche.CanviarMarxaAutomatic();
 				}
 				
-				else if (micoche.equals(TipusCanvi.CanviManual)) {
+				else if (micoche.tipuscanvi.equals(TipusCanvi.CanviManual)) {
 					micoche.CanviarMarxaManual();
+					System.out.println("MM"); 
 					}
 
 			}

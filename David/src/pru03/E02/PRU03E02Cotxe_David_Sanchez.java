@@ -153,7 +153,7 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 				
 					menuu = teclado.nextInt();
 					
-					System.out.println ("Estas en " + x);
+					
 					
 					
 					if (menuu==1) {
@@ -161,29 +161,30 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 						if (manual[x]<= 6 && manual[x] >=0) {
 						
 						x++;
-						System.out.print ("Has subido de marcha");
+						System.out.println ("Has subido de marcha");
 						
 						if (x==1) {
-							System.out.print ("Estas en primera");
+							System.out.println ("Estas en primera");
 						}
 						if (x==2) {
-							System.out.print ("Estas en segunda");
+							System.out.println ("Estas en segunda");
 						}
 						if (x==3) {
-							System.out.print ("Estas en tercera");
+							System.out.println ("Estas en tercera");
 						}
 						if (x==4) {
-							System.out.print ("Estas en cuarta");
+							System.out.println ("Estas en cuarta");
 						}
 						if (x==5) {
-							System.out.print ("Estas en quinta");
+							System.out.println ("Estas en quinta");
 						}
 						if (x==6) {
-							System.out.print ("Estas en sexta");
+							System.out.println ("Estas en sexta");
 						}
 						}
 						else {
 							System.out.println ("No puedes subir más.");
+							x--;
 						}
 
 					}
@@ -195,22 +196,22 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 							System.out.println("Has bajado de marcha.");
 							
 							if (x==0) {
-								System.out.print ("Estas marcha atrás.");
+								System.out.println ("Estas marcha atrás.");
 							}
 							if (x==1) {
-								System.out.print ("Estas en primera");
+								System.out.println ("Estas en primera");
 							}
 							if (x==2) {
-								System.out.print ("Estas en segunda");
+								System.out.println ("Estas en segunda");
 							}
 							if (x==3) {
-								System.out.print ("Estas en tercera");
+								System.out.println ("Estas en tercera");
 							}
 							if (x==4) {
-								System.out.print ("Estas en cuarta");
+								System.out.println ("Estas en cuarta");
 							}
 							if (x==5) {
-								System.out.print ("Estas en quinta");
+								System.out.println ("Estas en quinta");
 							}
 							}
 							else {
@@ -221,11 +222,11 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 						else if (menuu==3) {
 
 						valor = auto[0];
+						nn++;
 						System.out.println("Te habras quedado en la marcha" + x); 
 
 					}
 					
-
 					else{
 
 						System.out.println("¡Eso no está en el menu! Intentalo otra vez...");  
