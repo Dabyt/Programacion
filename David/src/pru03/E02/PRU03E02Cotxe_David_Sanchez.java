@@ -153,69 +153,78 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 				
 					menuu = teclado.nextInt();
 					
-					
-					
-					
 					if (menuu==1) {
 
-						if (manual[x]<= 6 && manual[x] >=0) {
+						if (x < 6 && x >=0) {
 						
 						x++;
-						System.out.println ("Has subido de marcha");
+						
 						
 						if (x==1) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en primera");
 						}
 						if (x==2) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en segunda");
 						}
 						if (x==3) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en tercera");
 						}
 						if (x==4) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en cuarta");
 						}
 						if (x==5) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en quinta");
 						}
 						if (x==6) {
+							System.out.println ("Has subido de marcha");
 							System.out.println ("Estas en sexta");
 						}
 						}
 						else {
 							System.out.println ("No puedes subir más.");
-							x--;
+							System.out.println ("Estas en sexta");
 						}
 
 					}
 					else if (menuu==2) {
 
-						if (manual[x]<= 6 && manual[x] >=0) {
+						if (x<=6 && x>0) {
 							
 							x--;
-							System.out.println("Has bajado de marcha.");
 							
 							if (x==0) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas marcha atrás.");
 							}
 							if (x==1) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas en primera");
 							}
 							if (x==2) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas en segunda");
 							}
 							if (x==3) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas en tercera");
 							}
 							if (x==4) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas en cuarta");
 							}
 							if (x==5) {
+								System.out.println("Has bajado de marcha.");
 								System.out.println ("Estas en quinta");
 							}
+							
 							}
 							else {
-								System.out.println ("No puedes bajar más.");
+								System.out.println ("No puedes bajar más, ya estás en marcha atrás.");
 							}
 							}
 					
@@ -223,7 +232,29 @@ public class PRU03E02Cotxe_David_Sanchez extends CotxeAbstracte implements Inter
 
 						valor = auto[0];
 						nn++;
-						System.out.println("Te habras quedado en la marcha" + x); 
+						System.out.print("Te habras quedado en la marcha"); 
+						
+						if (x==0) {							
+							System.out.println (" R");
+						}
+						if (x==1) {							
+							System.out.println (" primera");
+						}
+						if (x==2) {							
+							System.out.println (" segunda");
+						}
+						if (x==3) {							
+							System.out.println (" tercera");
+						}
+						if (x==4) {						
+							System.out.println (" cuarta");
+						}
+						if (x==5) {
+							System.out.println (" quinta");
+						}
+						if (x==6) {						
+							System.out.println (" sexta");
+						}
 
 					}
 					
