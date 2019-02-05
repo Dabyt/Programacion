@@ -48,9 +48,13 @@ public class examen extends SyncSafe{
 	System.out.print(" " + f);
 	
 	System.out.println("\n");
-
-	
 	}
+	
+	
+	
+	
+	cogerarchivo.close();
+	
 	}catch(IOException e) {
 		
 	}
