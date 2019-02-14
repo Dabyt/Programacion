@@ -1,4 +1,4 @@
-package SQL_primeras_pruebas;
+package sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,8 +23,7 @@ public class Sql_prueba {
             consulta = conectar.createStatement();
             
             index = consulta.executeQuery("select count(emp_no) as contador from employees;");
-            int contador = 0;
-            contador = index;
+           
             resultado = consulta.executeQuery("select first_name as Nombre, last_name as Apellido from employees order by emp_no ASC limit 3");
            
             writeResultSet(index,resultado);
@@ -48,7 +47,7 @@ public class Sql_prueba {
             String nombre = resultado.getString("Nombre");
             String apellido = resultado.getString("Apellido");
             
-            employees empleado = new employees(nombre, apellido);
+            employees empleado = new employees();
             
             System.out.print("Nom: " + nombre);
             System.out.println(" Apellido: " + apellido);
@@ -78,4 +77,14 @@ public class Sql_prueba {
         }
     }
 
+    public void llenarMatriz() {
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    }
+    
 }
