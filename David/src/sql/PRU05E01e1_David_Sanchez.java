@@ -7,11 +7,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class PRU05E01e1_David_Sanchez {
-
+	
+	// Creo las variables del SQL.
+	
 	    private Connection conectar = null;
 	    private Statement consulta = null;
 	    private ResultSet resultado = null;
 	  
+	//  Aqui hago el metodo de conexion con la base de datos, la consulta, y se lo paso al siguiente
+	//	método para que haga las operaciones.
+	    
+	// ANOTACIÓN: Hay que ejecutar el set global para que funcione.
+	    
 	    public  void leerBasededatos() throws Exception {
 	        
 	    	try {
@@ -33,6 +40,8 @@ public class PRU05E01e1_David_Sanchez {
 	    			close();
 	    		}} 
 	    
+	    // Me lee linea por linea sobre la consulta anterior y me lo imprime como yo le pido.
+	    
 	    private void writeResultSet(ResultSet resultado) throws SQLException {
 	        
 	 	
@@ -48,6 +57,8 @@ public class PRU05E01e1_David_Sanchez {
 	           
 	        }
 	    }
+	    
+	    // Cierro todas las variables de sql cuando ya no tienen nada.
 	    
 	    private void close() {
 	        try {
@@ -70,6 +81,8 @@ public class PRU05E01e1_David_Sanchez {
 	
 public static void main(String[] args) throws Exception {
 
+	// Invoco mi clase.
+	
 	PRU05E01e1_David_Sanchez basededatos = new PRU05E01e1_David_Sanchez();
     basededatos.leerBasededatos();	
    

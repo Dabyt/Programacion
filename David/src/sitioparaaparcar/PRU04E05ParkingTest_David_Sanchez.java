@@ -1,11 +1,9 @@
-package ParkingImport;
+package sitioparaaparcar;
 
 import java.util.Scanner;
-import pru04e05_rubriques.PRU04E05Parking_Bruno_Porcel;
 
 
-
-public class menu {
+public class PRU04E05ParkingTest_David_Sanchez {
 
 
 	public static void main(String[] args) throws Exception {
@@ -13,7 +11,7 @@ public class menu {
 	
 		// Declaracion de variables, el scanner, la clase, etc.
 		
-		PRU04E05Parking_Bruno_Porcel test = new PRU04E05Parking_Bruno_Porcel(100,5);
+		PRU04E05Parking_David_Sanchez test = new PRU04E05Parking_David_Sanchez(100,5);
 		int menu;
 		int n= 0;
 		Scanner teclado = new Scanner(System.in);
@@ -85,4 +83,5 @@ public class menu {
 			}while (n<=0);
 			
 		}}
+
 
