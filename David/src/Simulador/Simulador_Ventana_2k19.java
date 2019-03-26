@@ -21,9 +21,12 @@ public class Simulador_Ventana_2k19 {
 	static DefaultListModel<String> modelo = new DefaultListModel();
 	static JLabel texto = new JLabel();	
 	
+	
+	
+	
 	public static void jframe_menu(){
 				
-	menu.setSize(500,500);
+	menu.setSize(300,250);
 	menu.setBackground(Color.orange);
 	
 	menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,7 +37,7 @@ public class Simulador_Ventana_2k19 {
 	
 	public static void jlist(){
 		
-		lista.setSize(400, 400);
+		lista.setSize(200, 200);
 		lista.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		lista.setLayoutOrientation(JList.VERTICAL);
 		lista.setVisible(true);
@@ -50,16 +53,13 @@ public class Simulador_Ventana_2k19 {
 
 	public static void llenarLista() {
 		
-		modelo.addElement("Hermà");
-		modelo.addElement("PutoDios");
-		modelo.addElement("PIPO_MUERE");
-		modelo.addElement("dj");
-		modelo.addElement("Enfermo2");
-		modelo.addElement("SuperEnfermo3");
-		modelo.addElement("x");
-		modelo.addElement("!(Programador)");
-		modelo.addElement("Pechito");
-		modelo.addElement("Paz");
+		modelo.removeAllElements();
+		
+		modelo.addElement("1 - Jugar");
+		modelo.addElement("2 - Cambiar a modo oscuro");
+		modelo.addElement("3 - Opciones");
+		modelo.addElement("4 - Creditos");
+		modelo.addElement("5 - Salir");
 		
 		lista.setModel(modelo);	
 		
@@ -83,39 +83,124 @@ public class Simulador_Ventana_2k19 {
 		
 	}
 
-	public static void JLabel() {
+	public static void BotonAtras() {
+		
+		JButton atras = new JButton("Atras");
+		
+		//aceptar.setText("Aceptar");
+		//aceptar.setSize(100, 100);
+		atras.setBackground(Color.WHITE);
+		atras.setBorderPainted(true);
+		atras.setBounds(150, 100, 5, 55);
+		atras.setBackground(new java.awt.Color(22, 121, 198));
+		atras.setForeground(new java.awt.Color(219, 220, 236));
+		//aceptar.setEnabled(true);
+		
+		atras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+		
+			menu.remove(atras);
+				
+			llenarLista();
+			
+			jlist();
+			
+			}
+		});
 	
-	texto = new JLabel ("Indica el numero de jugadores:",
+		
+	}
+
+	public static void Texto() {
+	
+	texto = new JLabel ("Creado por Dabyt",
                 JLabel.CENTER);	
 	
+	texto.setSize(200, 200);
+
 	menu.add(texto);
 				
 	}
 	
 	public static void BotonAceptar() {
 		
-		JButton aceptar = new JButton();
+		JButton aceptar = new JButton("Click");
 		
-		aceptar.setText("Aceptar");
-		aceptar.setSize(100, 100);
+		//aceptar.setText("Aceptar");
+		//aceptar.setSize(100, 100);
 		aceptar.setBackground(Color.WHITE);
 		aceptar.setBorderPainted(true);
+		aceptar.setBounds(170, 140, 100, 50);
+		aceptar.setBackground(new java.awt.Color(22, 121, 198));
+		aceptar.setForeground(new java.awt.Color(219, 220, 236));
+		//aceptar.setEnabled(true);
 		
 		aceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 		
-			System.out.println("Selecciona el valor");
+			//aceptar.setBackground(new java.awt.Color(60, 31, 128));	
 			
+			int color = 0;
+			int contador = -1;
 			int [] indices = lista.getSelectedIndices();
 			
 			for (int i = 0;i<indices.length;i++) {
 				
-				System.out.println("Item: " +  indices[i]);
+				color++;
+				contador = indices[i];
+			
+				}
+			
+			if (color>0) {
+				aceptar.setBackground(new java.awt.Color(99, 242, 106));		
+				}
+				else {
+					
+				aceptar.setBackground(new java.awt.Color(253, 85, 85));		
+					
+				}
+			
+			switch (contador) {
+			
+			case 0:
+	
+				break;
+			
+			case 1:
 				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				menu.remove(lista);
+				menu.remove(aceptar);
+				Texto();
+				BotonAtras();
+				jframe_menu();
+				break;
+				
+			case 4:
+
+				break;
+		
+				
+			} 
+			
+			
+			
+			//if (color>=3) {
+				
+				//menu.remove(lista);
+			//	menu.add(aceptar);
+			//}
+			
+			
+			color = 0;
+			
 			}
 				
-				
-			}
 		});
 			
 		lista.add(aceptar);
@@ -123,21 +208,19 @@ public class Simulador_Ventana_2k19 {
 	}
 	
 	
+	
+	
+	
 	public static void main(String[] args) {
 	
 	inicio();
-	
-	JLabel();
-	
+
 	llenarLista();
 	
 	jlist();
 	
 	jframe_menu();
 	
-
-		
-
 	}
 
 }
